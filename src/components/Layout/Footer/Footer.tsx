@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 function Footer(): JSX.Element {
   const classes = useStyles()
   return (
-    <footer className={classes.root}>
+    <footer className={classes.root} data-test="footer">
       <Box display="flex" flexDirection="column" alignItems="center">
         <Typography component="p" variant="h6" align="center" gutterBottom>
           NextJS Infinite Scroll ©2021

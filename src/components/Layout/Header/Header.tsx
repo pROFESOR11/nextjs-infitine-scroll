@@ -25,7 +25,7 @@ function Header(): JSX.Element {
 
   return (
     <HideOnScroll>
-      <AppBar elevation={0} className={classes.appbar}>
+      <AppBar data-test="header" elevation={0} className={classes.appbar}>
         <Toolbar className={classes.toolbar} disableGutters>
           <Link href="/">
             <Typography variant="h6" color="textPrimary" className={classes.link}>

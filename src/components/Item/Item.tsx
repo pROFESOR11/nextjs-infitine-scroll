@@ -34,7 +34,7 @@ const Item = ({ id, title, url, thumbnailUrl }: ItemType): JSX.Element => {
 
   return (
     <>
-      <Card style={{ maxWidth: 345 }}>
+      <Card style={{ maxWidth: 345 }} data-test={`item-card-${id}`}>
         <CardMedia
           className={classes.cardMedia}
           component="img"
@@ -56,7 +56,7 @@ const Item = ({ id, title, url, thumbnailUrl }: ItemType): JSX.Element => {
         aria-describedby={`media-modal-${title}`}
         style={{ borderWidth: 0 }}
       >
-        <div className={classes.modal} tabIndex={-1}>
+        <div className={classes.modal} tabIndex={-1} data-test={`item-modal-${id}`}>
           <img src={url} height="100%" width="100%" />
         </div>
       </Modal>

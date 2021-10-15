@@ -19,7 +19,7 @@ const Items = ({ items, isFetching = true, fetchNextPage }: ItemsComponent): JSX
 
   return (
     <>
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={2} justifyContent="center" data-test="item-container">
         {items?.map((item) => (
           <Grid key={item.id.toString()} item xs={12} sm={6} md={4} lg={3}>
             <Item {...item} />
