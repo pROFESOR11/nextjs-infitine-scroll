@@ -29,7 +29,7 @@ function Header(): JSX.Element {
         <Toolbar className={classes.toolbar} disableGutters>
           <Link href="/">
             <Typography variant="h6" color="textPrimary" className={classes.link}>
-              NextJs Infinite Scroll
+              NextJS Infinite Scroll
             </Typography>
           </Link>
         </Toolbar>

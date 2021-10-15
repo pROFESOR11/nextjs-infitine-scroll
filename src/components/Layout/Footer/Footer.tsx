@@ -14,7 +14,7 @@ function Footer(): JSX.Element {
     <footer className={classes.root}>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Typography component="p" variant="h6" align="center" gutterBottom>
-          NextJs Infinite Scroll ©2021
+          NextJS Infinite Scroll ©2021
         </Typography>
       </Box>
     </footer>
