@@ -21,7 +21,11 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@customTypes/*": ["./src/types/*"],
+      "@constants/*": ["./src/constants/*"]
     }
   },
   "exclude": ["node_modules", ".next", "out"],
