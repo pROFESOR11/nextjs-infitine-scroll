@@ -19,17 +19,13 @@ Preview the example live [here](https://nextjs-infitine-scroll.vercel.app/).
 Install dependencies:
 
 ```
-
 yarn install
-
 ```
 
 Start dev server with:
 
 ```
-
 yarn dev
-
 ```
 
 ### Testing
