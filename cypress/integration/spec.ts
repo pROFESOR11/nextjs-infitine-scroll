@@ -5,7 +5,7 @@
 describe('NextJS Infinite Scroll Test Kit', () => {
   beforeEach(() => {
     // mock fixture data for remote end
-    cy.intercept('GET', `https://cors-anywhere.herokuapp.com/https://vercel-express-liart.vercel.app/api/posts?*`, {
+    cy.intercept('GET', `/api/items?*`, {
       fixture: 'items.json',
     })
     cy.visit('http://localhost:3000')

@@ -6,11 +6,7 @@ import { ItemType } from '@customTypes/Item'
 
 const useItems = (): UseInfiniteQueryResult<ItemType[], Error> => {
   const fetchItems = ({ pageParam = 0, limit = LIMIT_PER_REQUEST } = {}) =>
-    fetch(
-      `${
-        process.env.NEXT_PUBLIC_VERCEL_ENV ? '' : 'https://cors-anywhere.herokuapp.com/'
-      }https://vercel-express-liart.vercel.app/api/posts?start=${pageParam}&limit=${limit}`
-    ).then((response) => response.json())
+    fetch(`/api/items?start=${pageParam}&limit=${limit}`).then((response) => response.json())
 
   return useInfiniteQuery<ItemType[], Error>('items', fetchItems, {
     refetchOnWindowFocus: false,
