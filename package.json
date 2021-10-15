@@ -4,11 +4,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
-    "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test",
+    "test": "yarn run cy:run",
     "prepare": "husky install",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
