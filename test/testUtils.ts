@@ -1,3 +1,4 @@
+/* eslint-disable import/export */
 import { render } from '@testing-library/react'
 // import { ThemeProvider } from "my-ui-lib"
 // import { TranslationProvider } from "my-i18n-lib"
@@ -14,8 +15,7 @@ const Providers = ({ children }) => {
   // )
 }
 
-const customRender = (ui, options = {}) =>
-  render(ui, { wrapper: Providers, ...options })
+const customRender = (ui, options = {}) => render(ui, { wrapper: Providers, ...options })
 
 // re-export everything
 export * from '@testing-library/react'
