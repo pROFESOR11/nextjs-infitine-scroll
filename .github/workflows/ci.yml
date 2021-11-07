@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Tests Locally
-        needs: [build]
+        needs: build
         run: npm run test
 
   vercel-deploy-staging:
