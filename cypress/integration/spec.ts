@@ -8,7 +8,7 @@ describe('NextJS Infinite Scroll Test Kit', () => {
     cy.intercept('GET', `/api/items?*`, {
       fixture: 'items.json',
     })
-    cy.visit('http://localhost:3000')
+    cy.visit('')
   })
 
   it('header displayed correctly', () => {
