@@ -1,7 +1,7 @@
 name: CI/CD
 on: [push, pull_request]
 jobs:
-  CI/CD:
+  CI-CD:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
