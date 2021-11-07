@@ -26,16 +26,16 @@ jobs:
 
   unit-tests:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Run Tests Locally
-        needs: build
         run: npm run test
 
   vercel-deploy-staging:
     runs-on: ubuntu-latest
+    needs: [build, unit-tests]
     steps:
       - name: Deploy to Staging
-        needs: [build, unit-tests]
         id: deploy-vercel-staging
         uses: amondnet/vercel-action@v20
         with:
@@ -46,11 +46,11 @@ jobs:
 
   vercel-deploy-production:
     runs-on: ubuntu-latest
+    needs: [build, unit-tests]
     steps:
       - name: Deploy to Production
         uses: amondnet/vercel-action@v20
         id: deploy-vercel-production
-        needs: [build, unit-tests]
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
