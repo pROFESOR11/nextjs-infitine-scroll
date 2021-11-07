@@ -36,7 +36,9 @@ jobs:
       - name: Run Tests Against Vercel
         env:
           VERCEL_URL: ${{ steps.deploy-vercel-staging.outputs.preview-url }}
-        run: export CYPRESS_BASE_URL=${{ steps.deploy-vercel-staging.outputs.preview-url }} && npm run test
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }
+          CYPRESS_BASE_URL: ${{ steps.deploy-vercel-staging.outputs.preview-url }}
+        run: npm run test
 
       - name: Deploy to Production
         uses: amondnet/vercel-action@v20
