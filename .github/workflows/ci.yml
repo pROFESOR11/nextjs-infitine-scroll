@@ -38,6 +38,9 @@ jobs:
           VERCEL_URL: ${{ steps.deploy-vercel-staging.outputs.preview-url }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           CYPRESS_BASE_URL: ${{ steps.deploy-vercel-staging.outputs.preview-url }}
+        with:
+          install: false
+          record: true
         run: npm run test
 
       - name: Deploy to Production
