@@ -33,7 +33,7 @@ jobs:
 
   vercel-deploy-staging:
     runs-on: ubuntu-latest
-    needs: [build, unit-tests]
+    needs: [build, e2e-tests]
     steps:
       - name: Deploy to Staging
         id: deploy-vercel-staging
@@ -46,7 +46,7 @@ jobs:
 
   vercel-deploy-production:
     runs-on: ubuntu-latest
-    needs: [build, unit-tests]
+    needs: [build, e2e-tests]
     steps:
       - name: Deploy to Production
         uses: amondnet/vercel-action@v20
