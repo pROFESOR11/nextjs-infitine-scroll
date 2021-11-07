@@ -6,7 +6,7 @@
     "start": "next start",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
-    "test": "yarn run cy:run",
+    "test": "yarn run cy:run --record",
     "prepare": "husky install",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
